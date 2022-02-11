@@ -183,8 +183,9 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
 # keyboard
-exec "setxkbmap -layout us,cz"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
+exec setxkbmap -layout us,cz -variant ,qwerty -option 'grp:alt_shift_toggle'
+#exec "setxkbmap -layout us,cz"
+#exec "setxkbmap -option 'grp:alt_shift_toggle'"
 bindsym Control+$alt+Up exec amixer -q set Master 2dB+ unmute
 bindsym Control+$alt+Down exec amixer -q set Master 2dB- unmute
 bindsym Control+$alt+m exec amixer -q set Master toggle
